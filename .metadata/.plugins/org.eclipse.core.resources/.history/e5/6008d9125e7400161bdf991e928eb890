@@ -1,0 +1,68 @@
+package localhost.googlemaps.directions;
+
+import java.io.*;
+import java.net.*;
+
+import javax.management.RuntimeErrorException;
+
+/**
+ * 
+ * Sample class that makes a request to Google Maps Directions API
+ * 
+ * @author Jonathan Pack
+ * @since 2016-09-06
+ *
+ */
+
+public class RestRequest {
+	// End point URL for Google Maps Directions API
+	protected static String endpoint = "https://maps.googleapis.com/maps/api/directions/";
+	
+	// Character set to use when encoding URL parameters
+	protected static String charset = "UTF-8";
+	
+	// API key for making requests
+	protected static String key = "AIzaSyAI-b0OwKFzq2tHeLht0JiYzgN2kF6k_l8";
+	
+	public static void main(String[] args) {
+		
+		try {
+			
+			String origin = "Columbia MD";
+			
+			String destination = "Baltimore MD";
+			
+			String returnType = "json";
+			
+			String queryString = String.format("origin=%s%destination=%s%key=%s", 
+					URLEncoder.encode(origin, charset),
+					URLEncoder.encode(destination, charset),
+					URLEncoder.encode(key, charset)
+			);
+			
+			
+			// creates a new URL out of the endpoint, returnType, and queryString
+			URL googleDirections = new URL(endpoint + returnType + "?" + queryString);
+			HttpURLConnection connection = (HttpURLConnection) googleDirections.openConnection();
+			connection.setRequestMethod("GET");
+			
+			// if we didn't get a 200 response, throw a runtime exception
+			if (connection.getResponseCode() != 200){
+				throw new RuntimeException("Failed : HTTP error code: " + connection.getResponseCode());
+			}
+			
+			
+		} catch (MalformedURLException e) {
+			
+			e.printStackTrace();
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+	}
+	
+}
+

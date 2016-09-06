@@ -1,0 +1,30 @@
+package localhost.googlemaps.directions;
+
+import java.io.*;
+import java.net.*;
+
+/**
+ * 
+ * Sample class that makes a request to Google Maps Directions API
+ * 
+ * @author Jonathan Pack
+ * @since 2016-09-06
+ *
+ */
+
+public class RestRequest {
+	// End point URL for Google Maps Directions API
+	protected static String endpoint = "https://maps.googleapis.com/maps/api/directions/";
+	
+	// Character set to use when encoding URL parameters
+	protected static String charset = "UTF-8";
+	
+	// API key for making requests
+	protected static String key = "AIzaSyAI-b0OwKFzq2tHeLht0JiYzgN2kF6k_l8";
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
