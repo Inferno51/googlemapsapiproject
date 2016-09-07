@@ -62,3 +62,68 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jface.text 2 0 2016-09-06 15:02:36.986
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2016-09-07 10:05:14.642
+!MESSAGE Unable to read repository at http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/content.xml.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-07 13:26:43.869
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-09-07 13:26:43.891
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-09-07 13:49:30.854
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar
+  [+] C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar
+  [+] C:\Users\admin\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)

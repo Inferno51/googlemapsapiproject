@@ -49,16 +49,16 @@ public class RestRequest {
 			
 
 			//creates the URL parameters as a string, and encode them with the defined charset
-			String queryString = String.format("origin=%s&destination=%s&units=%s&avoid=%skey=%s",
-					URLEncoder.encode(origin, charset),
-					URLEncoder.encode(destination, charset),
-					URLEncoder.encode(units, charset),
-					URLEncoder.encode(avoid, charset),
-					URLEncoder.encode(key, charset)
-			);
+//			String queryString = String.format("origin=%s&destination=%s&u=%s&avoid=%skey=%s",
+//					URLEncoder.encode(origin, charset),
+//					URLEncoder.encode(destination, charset),
+//					URLEncoder.encode(units, charset),
+//					URLEncoder.encode(avoid, charset),
+//					URLEncoder.encode(key, charset)
+//			);
 
 			//creates a new URL out of the endpoint, returnType and  queryString
-			URL googleDirections = new URL(endpoint + returnType + "?" + queryString);
+			URL googleDirections = new URL(endpoint + returnType + "?" + "firstName=Dan&lastName=Strong&email=dan.strong@gmail.com&homePhone=410-555-5555&cellPhone=443-555-5555&password=P4ssw0rd&active=1");
 			HttpURLConnection connection = (HttpURLConnection) googleDirections.openConnection();
 			connection.setRequestMethod("GET");
 
